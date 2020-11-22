@@ -71,6 +71,7 @@ public class LicenseService {
                     {@HystrixProperty(name = "coreSize",value="30"),
                      @HystrixProperty(name="maxQueueSize", value="10")},
             commandProperties={
+            		 @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value="1000"),
                      @HystrixProperty(name="circuitBreaker.requestVolumeThreshold", value="10"),
                      @HystrixProperty(name="circuitBreaker.errorThresholdPercentage", value="75"),
                      @HystrixProperty(name="circuitBreaker.sleepWindowInMilliseconds", value="7000"),
